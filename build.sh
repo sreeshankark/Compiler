@@ -58,18 +58,7 @@ export \
     LANG=C.UTF-8 \
     JAVA_OPTS=" -Xmx7G " JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 sudo apt-get -qqy update &>/dev/null
-sudo apt-get -qqy install --no-install-recommends \
-    lsb-core lsb-security patchutils bc \
-    android-sdk-platform-tools adb fastboot \
-    openjdk-8-jdk ca-certificates-java maven \
-    python-all-dev python-is-python2 \
-    lzip lzop xzdec pixz libzstd-dev lib32z1-dev \
-    exfat-utils exfat-fuse \
-    gcc gcc-multilib g++-multilib clang llvm lld cmake ninja-build \
-    libxml2-utils xsltproc expat re2c libxml2-utils xsltproc expat re2c \
-    libreadline-gplv2-dev libsdl1.2-dev libtinfo5 xterm rename schedtool bison gperf libb2-dev \
-    pngcrush imagemagick optipng advancecomp \
-    &>/dev/null
+sudo apt -y install gperf gcc-multilib gcc-10-multilib g++-multilib g++-10-multilib libc6-dev lib32ncurses5-dev x11proto-core-dev libx11-dev tree lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc bc ccache lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libwxgtk3.0-gtk3-dev libxml2 lzop pngcrush schedtool squashfs-tools imagemagick libbz2-dev lzma ncftp qemu-user-static libstdc++-10-dev libtinfo5 &>/dev/null
 printf "Cleaning Some Programs...\n"
 sudo apt-get -qqy purge default-jre-headless openjdk-11-jre-headless &>/dev/null
 sudo apt-get -qy clean &>/dev/null && sudo apt-get -qy autoremove &>/dev/null
